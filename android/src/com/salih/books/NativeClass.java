@@ -94,49 +94,6 @@ public class NativeClass {
         }
     }
 
-//     public static void orequestStoragePermission(Activity activity) {
-//     if (activity == null) {
-//         Log.e(TAG, "Activity is null, cannot request permissions!");
-//         return;
-//     }
-
-//     // xrequestStoragePermission(activity);
-
-
-//     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-//         if (activity.checkSelfPermission(Manifest.permission.READ_MEDIA_IMAGES) != PackageManager.PERMISSION_GRANTED &&
-//             activity.checkSelfPermission(Manifest.permission.READ_MEDIA_VIDEO) != PackageManager.PERMISSION_GRANTED &&
-//             activity.checkSelfPermission(Manifest.permission.READ_MEDIA_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-
-//             Log.d(TAG, "Requesting Android 13+ storage permissions");
-//             activity.requestPermissions(
-//                 new String[]{
-//                     Manifest.permission.READ_MEDIA_IMAGES,
-//                     Manifest.permission.READ_MEDIA_VIDEO,
-//                     Manifest.permission.READ_MEDIA_AUDIO
-//                 },
-//                 STORAGE_PERMISSION_REQUEST_CODE
-//             );
-//         } else {
-//             Log.d(TAG, "Storage permissions already granted.");
-//         }
-//     } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-//         if (!Environment.isExternalStorageManager()) {
-//             Log.d(TAG, "Requesting MANAGE_EXTERNAL_STORAGE permission");
-//             Intent intent = new Intent(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
-//             activity.startActivity(intent);
-//         }
-//     } else {
-//         if (activity.checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-//             Log.d(TAG, "Requesting READ_EXTERNAL_STORAGE permission");
-//             activity.requestPermissions(
-//                 new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-//                 STORAGE_PERMISSION_REQUEST_CODE
-//             );
-//         }
-//     }
-// }
-
     public static String[] getAllPdfs(Activity activity) {
         List<String> pdfFiles = new ArrayList<>();
 
